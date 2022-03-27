@@ -1,0 +1,806 @@
+$bgColor: #f8f8f8;
+$text: #1b1c21;
+$text-gray: #7e7e82;
+
+@font-face {
+  font-family: "Regular";
+  src: url(../fonts/TTLakesCondensed-Regular.woff);
+}
+@font-face {
+  font-family: "Demibold";
+  src: url(../fonts/TTLakesCondensed-DemiBold.woff);
+}
+@font-face {
+  font-family: "Bold";
+  src: url(../fonts/TTLakesCondensed-Bold.woff);
+}
+html,
+body {
+  font-family: "TT Lakes Regular";
+  margin: 0;
+  padding: 0;
+  background: $bgColor;
+  box-sizing: border-box;
+}
+.reset-list {
+  list-style-type: none;
+}
+.button {
+  border: none;
+  outline: none;
+  background-color: white;
+  cursor: pointer;
+}
+.color__group {
+  background: $bgColor;
+}
+.section-header {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
+  color: $text-gray;
+  padding: 1em 1em 1em 0;
+  margin-top: 1em;
+  background: linear-gradient(90deg, $bgColor 0%, #ffffff 98.61%);
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.text-header {
+  font-size: 14px;
+  line-height: 16px;
+  color: $text-gray;
+  opacity: 0.72;
+}
+
+/* Навигационное меню */
+
+.content {
+  padding-left: 1em;
+}
+.header {
+  background-color: white;
+  padding: 0;
+  position: relative;
+  .nav {
+    padding: 1.5rem 1rem;
+    display: flex;
+    & button, label {
+      position: relative;
+    }
+    &__repair::before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      bottom: 10px;
+      border-right: 2px #eaeaea solid;
+      border-radius: 1px;
+    }
+    &__support--group {
+      display: none;
+    }
+    & svg {
+      cursor: pointer;
+    }
+    &__logo {
+      margin-left: 1em;
+      margin-right: 0.5em;
+    }
+    &__repair svg {
+      margin-left: 0.5em;
+      padding-left: 1em;
+    }
+  }
+}
+
+/* Основная информация */
+
+.about {
+  &__header {
+    margin-top: 1.5em;
+
+
+  }
+  &__title {
+
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: -0.6px;
+    color: $text;
+    background: $bgColor;
+
+    &::before {
+      content: "";
+      height: 40px;
+      width: 3px;
+      background: #41f6d7;
+      transform: matrix(-1, 1, 0, 1, 0, 0);
+      position: absolute;
+      left: 0px;
+    }
+  }
+  &__group--services {
+    display: none;
+  }
+  &__images img {
+    margin-top: 1em;
+    width: 320px;
+    border-radius: 6px;
+  }
+}
+
+/* Услуги */
+.menu__services {
+  display: flex;
+  padding-left: 0;
+  align-items: center;
+  overflow: auto;
+  &--item {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: $text-gray;
+    white-space: nowrap;
+  }
+  &--item .menu__button.button--active {
+    background-color: #ffffff;
+    border: 2px solid #b8ffec;
+    border-radius: 6px;
+  }
+  &--item .menu__button {
+    padding: 0.5em 1em 0.5em 1em;
+    color: $text-gray;
+    background: $bgColor;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    font-weight: 600;
+  }
+}
+.information {
+  &__description {
+    margin-top: 1em;
+    height: 100px;
+    overflow: auto;
+  }
+  &__description--text {
+    margin-top: 0;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: $text;
+  }
+  &__continue {
+    margin-top: 0.5em;
+  }
+  &__continue svg {
+    margin-left: 0.5em;
+  }
+  &__continue span {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: $text;
+    margin-left: 1em;
+    font-weight: 600;
+  }
+}
+.brands {
+  &__title {
+    margin: 0;
+    padding: 0;
+  }
+  &__list {
+    gap: 1rem;
+    padding-left: 0;
+    padding-bottom: 1em;
+    &--slider {
+      display: flex;
+    }
+    &--slider button {
+      border: 1px solid #eaeaea;
+      padding: 1em;
+      border-radius: 6px;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      flex: auto;
+    }
+    &--slider button svg:last-child {
+      margin-left: auto;
+    }
+    &--expand {
+      display: none;
+    }
+    &--hidden {
+      display: none;
+    }
+  }
+}
+.tech {
+  &__title {
+    padding: 0;
+    margin: 0;
+  }
+  &__list {
+    gap: 1rem;
+    padding-left: 0;
+    padding-bottom: 1em;
+    &--slider {
+      display: flex;
+      height: 10em;
+    }
+    &--slider button {
+      border: 1px solid #eaeaea;
+      padding: 1em;
+      border-radius: 6px;
+      background-color: white;
+      display: flex;
+      flex: auto;
+    }
+    &--slider button span {
+      align-self: start;
+    }
+    &--slider button svg {
+      align-self: end;
+      margin-left: auto;
+    }
+    &--expand {
+      display: none;
+    }
+    &--hidden {
+      display: none;
+    }
+  }
+}
+.prices-services {
+  &__title {
+    margin: 0;
+  }
+  &__table {
+    display: none;
+  }
+  &__list {
+    gap: 1rem;
+    padding-left: 0;
+    padding-bottom: 1em;
+
+    &--slider {
+      background-color: #fff;
+      padding: 1em;
+      padding-top: 0;
+      border: 1px solid #eaeaea;
+    }
+    &--slider button {
+      border: 1px solid #eaeaea;
+      padding: 0.5em 1em;
+      background-color: #ff3e79;
+      color: white;
+      display: inline-block;
+      border-radius: 16px;
+    }
+    &--slider dl {
+      display: inline;
+      white-space: nowrap;
+      flex-wrap: wrap;
+    }
+    &--slider dl dt {
+      font-size: 14px;
+      line-height: 16px;
+      color: $text-gray;
+      opacity: 0.72;
+      padding-top: 1em;
+    }
+    &--slider dl dd {
+      margin: 0;
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 0.2px;
+      color: $text;
+    }
+    &--slider button svg {
+      align-self: end;
+      margin-left: auto;
+    }
+    &--expand {
+      display: none;
+    }
+    &--hidden {
+      display: none;
+    }
+  }
+}
+
+.logo {
+  cursor: default;
+}
+.commercial-offer {
+  a {
+    text-decoration: none;
+    color: $text;
+    font-weight: 600;
+  }
+}
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  color: $text-gray;
+  margin: 3em 1em 0 1em;
+  a {
+    text-decoration: none;
+    color: $text-gray;
+  }
+}
+@media (min-width: 768px) {
+  /* Навигационное меню */
+
+  .header {
+    .nav {
+      padding: 1rem 1rem;
+      align-items: center;
+      &__menu svg {
+        padding-right: 1.2em;
+      }
+      &__menu::after {
+        content: "";
+        position: absolute;
+        top: 5px;
+        bottom: 10px;
+        border-left: 2px #eaeaea solid;
+        border-radius: 1px;
+      }
+      &__repair svg {
+        padding-left: 1em;
+      }
+      &__support--group {
+        margin-left: auto;
+        position: relative;
+      }
+      &__logo::after {
+        display: none;
+      }
+      &__support--group {
+        display: flex;
+        margin-right: 5px;
+      }
+    }
+  }
+
+input[type='checkbox']:checked + .pppp {
+  transform: translateX(320px);
+  z-index: 10000000;
+  .overlay {
+    height: 100vh;
+    width: 200vh;
+    z-index: 55;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+  /* Основная информация */
+
+  .pppp {
+    position: fixed;
+  .menu {
+    display: flex;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    transform: translateX(-320px);
+    z-index: 2000;
+
+    transition: all 0.5s;
+    &__panel {
+      max-width: 320px;
+      height: 100vh;
+      box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02),
+        16px 0px 52px rgba(14, 24, 80, 0.2);
+      padding: 1.5em 1.5em 2em 1.5em;
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+    }
+    &__block {
+      margin-bottom: 3em;
+      display: flex;
+      gap: 1em;
+      align-items: center;
+      .menu__search {
+        margin-left: auto;
+      }
+    }
+    &__header {
+      &__block {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+      }
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+      padding: 0;
+    }
+    &__nav {
+      flex-grow: 1;
+    }
+    &__button {
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.2px;
+      color: #1b1c21;
+      border: none;
+      padding: 0;
+      text-align: start;
+      font-family: "TT Lakes Demibold";
+      &:hover {
+        opacity: 0.7;
+      }
+      &:focus {
+        opacity: 0.3;
+      }
+    }
+    .button__active {
+      color: $text-gray;
+      opacity: 1;
+      &::before {
+        content: "";
+        height: 32px;
+        width: 4px;
+        background: #41f6d7;
+        transform: matrix(-1, 1, 0, 1, 0, 0);
+        cursor: pointer;
+        position: absolute;
+        left: 0;
+      }
+    }
+    &__footer {
+      .support__group {
+        display: flex;
+        gap: 0.5em;
+        padding: 0;
+      }
+      a {
+        text-decoration: none;
+        color: $text;
+        margin-top: 1em;
+        display: flex;
+        font-weight: 600;
+      }
+      .tel-text {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: -0.6px;
+        margin-top: 0.5em;
+        margin-bottom: 2.5em;
+      }
+      .language {
+        display: flex;
+        padding: 0;
+        .change-language {
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: -0.2px;
+          color: #1b1c21;
+          margin-right: 0.5em;
+          text-align: start;
+          font-weight: 600;
+          cursor: pointer;
+          padding: 0;
+          &__active {
+            color: $text-gray;
+          }
+        }
+      }
+    }
+  }
+}
+  .about {
+    &__images img {
+      max-width: 400px;
+      margin: 0 0 0 2em;
+    }
+  }
+  .information {
+    display: flex;
+    margin-top: 1em;
+    min-height: 5em;
+    &__description {
+      margin-top: 0;
+    }
+  }
+  .brands {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      &--slider {
+        max-width: 200px;
+      }
+      &--slider:nth-child(n + 7) {
+        display: none;
+      }
+      &--expand {
+        display: block;
+      }
+      &--expand span {
+        padding-left: 1em;
+      }
+      &--hidden span {
+        margin-left: 1em;
+      }
+    }
+  }
+  .tech {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      &--slider {
+        max-width: 200px;
+      }
+      &--slider:nth-child(n + 7) {
+        display: none;
+      }
+      &--expand {
+        display: block;
+      }
+      &--expand span {
+        padding-left: 1em;
+      }
+      &--hidden span {
+        margin-left: 1em;
+      }
+    }
+  }
+
+  .prices-services__table--block {
+    display: flex;
+    min-width: 100%;
+  }
+  .prices-services {
+    &__table {
+      width: 100%;
+      margin: 1em 1em 1em 0;
+      display: block;
+      border-collapse: collapse;
+    }
+    &__table thead tr th {
+      padding: 1em;
+      text-align: start;
+    }
+    &__table tbody tr td {
+      padding: 1em;
+      background: #ffffff;
+      width: 33%;
+      border-bottom: 1px solid #eaeaea;
+      button svg {
+        padding-left: 1em;
+      }
+    }
+    &__table button {
+      border: 1px solid #eaeaea;
+      padding: 0.5em 1.5em;
+      background-color: #ff3e79;
+      color: white;
+      display: flex;
+      align-items: center;
+      border-radius: 16px;
+    }
+    .swiper {
+      display: none;
+    }
+    .prices-services__list--expand {
+      display: none;
+    }
+    .prices-services__list--hidden {
+      display: none;
+    }
+  }
+  .style-button {
+    font-family: "TT Lakes Demibold", sans-serif;
+    display: inline;
+    margin-left: 1.5em;
+    border: none;
+    background: $bgColor;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: $text;
+  }
+  .footer {
+    display: flex;
+    text-align: start;
+    justify-content: space-between;
+    margin: 3em 1em 0 0;
+    color: $text-gray;
+    a {
+      text-decoration: none;
+      color: $text-gray;
+    }
+    span:last-child {
+      text-align: end;
+    }
+  }
+}
+
+@media (min-width: 1366px) {
+  .content {
+    margin-left: 260px;
+  }
+  /* Навигационное меню */
+  .header {
+    display: none;
+  }
+
+  /* Основная информация */
+  .about {
+    margin: 0 2em 0em 0;
+    &__title {
+      &::before {
+        content: "";
+        height: 40px;
+        width: 3px;
+        background: #41f6d7;
+        transform: matrix(-1, 1, 0, 1, 0, 0);
+        position: absolute;
+        left: -28px;
+      }
+    }
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+    }
+    &__group--services {
+      display: flex;
+    }
+    &__group--services {
+      .button__service {
+        display: flex;
+        align-items: center;
+      }
+    }
+    &__group--services {
+      .button__service span {
+        font-weight: 600;
+        padding-right: 0.5em;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        color: $text;
+      }
+    }
+    &__images img {
+      max-width: 500px;
+    }
+  }
+  .service__checkstatus {
+    margin-left: 1em;
+  }
+  .overlay {
+    display: none;
+  }
+  .pppp {
+  .menu {
+    min-width: 320px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    transform: translateX(0);
+    &__panel {
+      height: 95%;
+      position: fixed;
+      box-shadow: none;
+      padding: 1.5em 1.5em 2em 1.5em;
+      display: flex;
+      flex-direction: column;
+      background-color: #fff;
+    }
+    &__block {
+      margin-bottom: 3em;
+      display: flex;
+      .menu__close {
+        display: none;
+      }
+      .menu__search {
+        margin-left: auto;
+      }
+    }
+    &__header {
+      &__block {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+      }
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+      padding: 0;
+    }
+    &__nav {
+      flex-grow: 1;
+    }
+    &__button {
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.2px;
+      color: #1b1c21;
+      border: none;
+      padding: 0;
+      text-align: start;
+      font-family: "TT Lakes Demibold";
+      &:hover {
+        opacity: 0.7;
+      }
+      &:focus {
+        opacity: 0.3;
+      }
+    }
+    .button__active {
+      color: $text-gray;
+      opacity: 1;
+      &::before {
+        content: "";
+        height: 32px;
+        width: 4px;
+        background: #41f6d7;
+        transform: matrix(-1, 1, 0, 1, 0, 0);
+        cursor: pointer;
+        position: absolute;
+        left: 0;
+      }
+    }
+    &__footer {
+      .support__group {
+        display: flex;
+        gap: 0.5em;
+        padding: 0;
+      }
+      a {
+        text-decoration: none;
+        color: $text;
+        margin-top: 1em;
+        display: flex;
+        font-weight: 600;
+      }
+      .tel-text {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: -0.6px;
+        margin-top: 0.5em;
+        margin-bottom: 2.5em;
+      }
+      .language {
+        display: flex;
+        padding: 0;
+        .change-language {
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: -0.2px;
+          color: #1b1c21;
+          margin-right: 0.5em;
+          text-align: start;
+          font-weight: 600;
+          cursor: pointer;
+          padding: 0;
+          &__active {
+            color: $text-gray;
+          }
+        }
+      }
+    }
+  }
+}
+}
