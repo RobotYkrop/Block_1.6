@@ -51,9 +51,10 @@ body {
   color: $text-gray;
   opacity: 0.72;
 }
-
+.logo {
+  cursor: default;
+}
 /* Навигационное меню */
-
 .content {
   padding-left: 1em;
 }
@@ -64,8 +65,14 @@ body {
   .nav {
     padding: 1.5rem 1rem;
     display: flex;
-    & button, label {
+    & ul li {
+      display: flex;
+      gap: 1em;
+    }
+    & button,
+    label {
       position: relative;
+      display: flex;
     }
     &__repair::before {
       content: "";
@@ -91,17 +98,12 @@ body {
     }
   }
 }
-
 /* Основная информация */
-
 .about {
   &__header {
     margin-top: 1.5em;
-
-
   }
   &__title {
-
     font-weight: 600;
     font-size: 28px;
     line-height: 36px;
@@ -128,7 +130,6 @@ body {
     border-radius: 6px;
   }
 }
-
 /* Услуги */
 .menu__services {
   display: flex;
@@ -310,10 +311,6 @@ body {
     }
   }
 }
-
-.logo {
-  cursor: default;
-}
 .commercial-offer {
   a {
     text-decoration: none;
@@ -333,72 +330,19 @@ body {
     color: $text-gray;
   }
 }
-@media (min-width: 768px) {
-  /* Навигационное меню */
-
-  .header {
-    .nav {
-      padding: 1rem 1rem;
-      align-items: center;
-      &__menu svg {
-        padding-right: 1.2em;
-      }
-      &__menu::after {
-        content: "";
-        position: absolute;
-        top: 5px;
-        bottom: 10px;
-        border-left: 2px #eaeaea solid;
-        border-radius: 1px;
-      }
-      &__repair svg {
-        padding-left: 1em;
-      }
-      &__support--group {
-        margin-left: auto;
-        position: relative;
-      }
-      &__logo::after {
-        display: none;
-      }
-      &__support--group {
-        display: flex;
-        margin-right: 5px;
-      }
-    }
-  }
-
-input[type='checkbox']:checked + .pppp {
-  transform: translateX(320px);
-  z-index: 10000000;
-  .overlay {
-    height: 100vh;
-    width: 200vh;
-    z-index: 55;
-    background-color: rgba(0,0,0,0.5);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
-}
-  /* Основная информация */
-
-  .pppp {
-    position: fixed;
+.menu--overlay {
+  width: 100%;
   .menu {
-    display: flex;
     position: fixed;
+    display: flex;
     top: 0;
     bottom: 0;
-    transform: translateX(-320px);
-    z-index: 2000;
-
+    transform: translateX(320px);
+    z-index: 50;
     transition: all 0.5s;
+    width: 100%;
     &__panel {
-      max-width: 320px;
-      height: 100vh;
+      width: 100%;
       box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02),
         16px 0px 52px rgba(14, 24, 80, 0.2);
       padding: 1.5em 1.5em 2em 1.5em;
@@ -504,6 +448,269 @@ input[type='checkbox']:checked + .pppp {
     }
   }
 }
+.overlay {
+  height: 100vh;
+  width: 100%;
+  z-index: 2;
+  background: #ffffff;
+  opacity: 0.96;
+  position: relative;
+}
+.feedback--overlay {
+  width: 100%;
+
+  .feedback {
+    position: fixed;
+    right: 0;
+    z-index: 70;
+    padding: 1em;
+    background: #ffffff;
+    transform: translateX(320px);
+    z-index: 50;
+    height: 100%;
+    transition: all 0.5s;
+    box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02),
+      16px 0px 52px rgba(14, 24, 80, 0.2);
+    &__title {
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 36px;
+      letter-spacing: -0.6px;
+      color: $text;
+      &::before {
+        content: "";
+        height: 40px;
+        width: 3px;
+        background: #41f6d7;
+        transform: matrix(-1, 1, 0, 1, 0, 0);
+        position: absolute;
+        left: 0px;
+      }
+    }
+
+    &__input {
+      margin-top: 1em;
+      padding: 1em;
+      display: flex;
+      background: #ffffff;
+      border: 1px solid #eaeaea;
+      border-radius: 8px;
+    }
+    & button {
+      border: 1px solid #eaeaea;
+      padding: 0.5em 1em;
+      background-color: #ff3e79;
+      color: white;
+      border-radius: 16px;
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+    }
+    & p a {
+      text-decoration: none;
+      color: #ff3e79;
+    }
+  }
+}
+.call--overlay {
+  width: 100%;
+  .call {
+    position: fixed;
+    right: 0;
+    z-index: 70;
+    padding: 1em;
+    background: #ffffff;
+    transform: translateX(320px);
+    z-index: 50;
+    height: 100%;
+    transition: all 0.5s;
+    box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02),
+      16px 0px 52px rgba(14, 24, 80, 0.2);
+    &__title {
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 36px;
+      letter-spacing: -0.6px;
+      color: $text;
+      &::before {
+        content: "";
+        height: 40px;
+        width: 3px;
+        background: #41f6d7;
+        transform: matrix(-1, 1, 0, 1, 0, 0);
+        position: absolute;
+        left: 0px;
+      }
+    }
+    &__input {
+      margin-top: 1em;
+      padding: 1em;
+      display: flex;
+      background: #ffffff;
+      border: 1px solid #eaeaea;
+      border-radius: 8px;
+    }
+    & button {
+      border: 1px solid #eaeaea;
+      padding: 0.5em 1em;
+      background-color: #ff3e79;
+      color: white;
+      border-radius: 16px;
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+    }
+    & p a {
+      text-decoration: none;
+      color: #ff3e79;
+    }
+  }
+}
+#side-checkbox--feedback:checked ~ .feedback--overlay,
+#side-checkbox--call:checked ~ .call--overlay {
+  transform: translateX(-320px);
+  z-index: 60;
+  display: block;
+  position: fixed;
+}
+#side-checkbox:checked ~ .menu--overlay {
+  transform: translateX(320px);
+  z-index: 60;
+  display: block;
+  position: fixed;
+}
+#side-checkbox:checked ~ main,
+#side-checkbox--feedback:checked ~ main,
+#side-checkbox--call:checked ~ main {
+  display: none;
+}
+#side-checkbox:checked ~ header,
+#side-checkbox--feedback:checked ~ header,
+#side-checkbox--call:checked ~ header {
+  display: none;
+}
+#side-checkbox--feedback ~ .feedback--overlay,
+#side-checkbox ~ .menu--overlay,
+#side-checkbox--call ~ .call--overlay {
+  display: none;
+}
+@media (min-width: 768px) {
+  /* Навигационное меню */
+  .header {
+    .nav {
+      padding: 1rem 1rem;
+      align-items: center;
+      &__menu {
+        padding-right: 1em;
+      }
+      &__menu::before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        bottom: 5px;
+        right: 0;
+        border-left: 2px #eaeaea solid;
+        border-radius: 1px;
+      }
+      &__repair svg {
+        padding-left: 1em;
+      }
+      &__support--group {
+        margin-left: auto;
+        position: relative;
+        display: flex;
+        gap: 0.5em;
+      }
+      &__logo::after {
+        display: none;
+      }
+      &__support--group {
+        display: flex;
+        margin-right: 5px;
+      }
+    }
+  }
+  #side-checkbox:checked ~ main,
+  #side-checkbox--feedback:checked ~ main,
+  #side-checkbox--call:checked ~ main {
+    display: block;
+  }
+  #side-checkbox:checked ~ header,
+  #side-checkbox--feedback:checked ~ header,
+  #side-checkbox--call:checked ~ header {
+    display: block;
+  }
+  // Основная информация
+  .menu--overlay {
+    width: 100%;
+    .menu {
+      position: fixed;
+      max-width: 320px;
+      top: 0;
+      bottom: 0;
+      z-index: 50;
+      transform: translateX(-320px);
+      transition: all 0.5s;
+      &__panel {
+        box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02),
+          16px 0px 52px rgba(14, 24, 80, 0.2);
+        padding: 1.5em 1.5em 2em 1.5em;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+      }
+      &__block {
+        margin-bottom: 3em;
+        display: flex;
+        gap: 1em;
+        align-items: center;
+        .menu__search {
+          margin-left: auto;
+        }
+      }
+    }
+  }
+
+  .feedback--overlay {
+    width: 100%;
+    .feedback {
+      max-width: 320px;
+      position: fixed;
+      right: 0;
+      z-index: 70;
+      padding: 1em;
+      background: #ffffff;
+      transform: translateX(320px);
+      z-index: 50;
+      transition: all 0.5s;
+      &__close {
+        position: absolute;
+        left: -65px;
+      }
+    }
+  }
+  .call--overlay {
+    width: 100%;
+    .call {
+      max-width: 320px;
+      position: fixed;
+      right: 0;
+      z-index: 70;
+      padding: 1em;
+      background: #ffffff;
+      transform: translateX(320px);
+      z-index: 50;
+      transition: all 0.5s;
+      & button {
+        border: 1px solid #eaeaea;
+        padding: 0.5em 1em;
+        background-color: #ff3e79;
+        color: white;
+        border-radius: 16px;
+        margin-left: auto;
+      }
+    }
+  }
   .about {
     &__images img {
       max-width: 400px;
@@ -560,7 +767,6 @@ input[type='checkbox']:checked + .pppp {
       }
     }
   }
-
   .prices-services__table--block {
     display: flex;
     min-width: 100%;
@@ -639,7 +845,6 @@ input[type='checkbox']:checked + .pppp {
   .header {
     display: none;
   }
-
   /* Основная информация */
   .about {
     margin: 0 2em 0em 0;
@@ -685,122 +890,30 @@ input[type='checkbox']:checked + .pppp {
   .service__checkstatus {
     margin-left: 1em;
   }
-  .overlay {
-    display: none;
-  }
-  .pppp {
-  .menu {
-    min-width: 320px;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    transform: translateX(0);
-    &__panel {
-      height: 95%;
-      position: fixed;
-      box-shadow: none;
-      padding: 1.5em 1.5em 2em 1.5em;
+  .menu--overlay {
+    max-width: 320px;
+    .menu {
+      padding: 0;
+      margin: 0;
       display: flex;
-      flex-direction: column;
-      background-color: #fff;
-    }
-    &__block {
-      margin-bottom: 3em;
-      display: flex;
-      .menu__close {
-        display: none;
+      transform: translateX(0);
+      &__panel {
+        height: 95%;
+        max-width: 200px;
+        position: fixed;
+        box-shadow: none;
       }
-      .menu__search {
-        margin-left: auto;
-      }
-    }
-    &__header {
       &__block {
-        display: flex;
-        align-items: center;
-        gap: 1em;
-      }
-    }
-
-    &__list {
-      display: flex;
-      flex-direction: column;
-      gap: 2em;
-      padding: 0;
-    }
-    &__nav {
-      flex-grow: 1;
-    }
-    &__button {
-      font-size: 16px;
-      line-height: 24px;
-      letter-spacing: -0.2px;
-      color: #1b1c21;
-      border: none;
-      padding: 0;
-      text-align: start;
-      font-family: "TT Lakes Demibold";
-      &:hover {
-        opacity: 0.7;
-      }
-      &:focus {
-        opacity: 0.3;
-      }
-    }
-    .button__active {
-      color: $text-gray;
-      opacity: 1;
-      &::before {
-        content: "";
-        height: 32px;
-        width: 4px;
-        background: #41f6d7;
-        transform: matrix(-1, 1, 0, 1, 0, 0);
-        cursor: pointer;
-        position: absolute;
-        left: 0;
-      }
-    }
-    &__footer {
-      .support__group {
-        display: flex;
-        gap: 0.5em;
-        padding: 0;
-      }
-      a {
-        text-decoration: none;
-        color: $text;
-        margin-top: 1em;
-        display: flex;
-        font-weight: 600;
-      }
-      .tel-text {
-        font-weight: 600;
-        font-size: 24px;
-        line-height: 32px;
-        letter-spacing: -0.6px;
-        margin-top: 0.5em;
-        margin-bottom: 2.5em;
-      }
-      .language {
-        display: flex;
-        padding: 0;
-        .change-language {
-          font-size: 16px;
-          line-height: 24px;
-          letter-spacing: -0.2px;
-          color: #1b1c21;
-          margin-right: 0.5em;
-          text-align: start;
-          font-weight: 600;
-          cursor: pointer;
-          padding: 0;
-          &__active {
-            color: $text-gray;
-          }
+        .menu__close {
+          display: none;
         }
       }
     }
+    .overlay {
+      display: none;
+    }
   }
-}
+  #side-checkbox ~ .menu--overlay {
+    display: block;
+  }
 }
