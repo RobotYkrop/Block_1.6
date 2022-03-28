@@ -19,7 +19,9 @@ module.exports = {
 
   // Source maps для удобства отладки
   devtool: "source-map",
-
+  performance: {
+    hints: false
+  },
   module: {
     rules: [
       // Транспилируем js с babel
