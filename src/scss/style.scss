@@ -1,6 +1,8 @@
 $bgColor: #f8f8f8;
 $text: #1b1c21;
 $text-gray: #7e7e82;
+$border: 1px solid #EAEAEA;
+$green: #41f6d7;
 
 @font-face {
   font-family: "Regular";
@@ -42,7 +44,7 @@ body {
   color: $text-gray;
   padding: 1em 1em 1em 0;
   margin-top: 1em;
-  background: linear-gradient(90deg, $bgColor 0%, #ffffff 98.61%);
+  background: linear-gradient(90deg, $bgColor 0%, white 98.61%);
   transform: matrix(1, 0, 0, 1, 0, 0);
 }
 .text-header {
@@ -115,7 +117,7 @@ body {
       content: "";
       height: 40px;
       width: 3px;
-      background: #41f6d7;
+      background: $green;
       transform: matrix(-1, 1, 0, 1, 0, 0);
       position: absolute;
       left: 0px;
@@ -144,7 +146,7 @@ body {
     white-space: nowrap;
   }
   &--item .menu__button.button--active {
-    background-color: #ffffff;
+    background-color: white;
     border: 2px solid #b8ffec;
     border-radius: 6px;
   }
@@ -199,7 +201,7 @@ body {
       display: flex;
     }
     &--slider button {
-      border: 1px solid #eaeaea;
+      border: $border;
       padding: 1em;
       border-radius: 6px;
       background-color: white;
@@ -232,7 +234,7 @@ body {
       height: 10em;
     }
     &--slider button {
-      border: 1px solid #eaeaea;
+      border: $border;
       padding: 1em;
       border-radius: 6px;
       background-color: white;
@@ -267,13 +269,13 @@ body {
     padding-bottom: 1em;
 
     &--slider {
-      background-color: #fff;
+      background-color: white;
       padding: 1em;
       padding-top: 0;
-      border: 1px solid #eaeaea;
+      border: $border;
     }
     &--slider button {
-      border: 1px solid #eaeaea;
+      border: $border;
       padding: 0.5em 1em;
       background-color: #ff3e79;
       color: white;
@@ -399,7 +401,7 @@ body {
         content: "";
         height: 32px;
         width: 4px;
-        background: #41f6d7;
+        background: $green;
         transform: matrix(-1, 1, 0, 1, 0, 0);
         cursor: pointer;
         position: absolute;
@@ -452,7 +454,7 @@ body {
   height: 100vh;
   width: 100%;
   z-index: 2;
-  background: #ffffff;
+  background: white;
   opacity: 0.96;
   position: relative;
 }
@@ -464,7 +466,7 @@ body {
     right: 0;
     z-index: 70;
     padding: 1em;
-    background: #ffffff;
+    background: white;
     transform: translateX(320px);
     z-index: 50;
     height: 100%;
@@ -481,7 +483,7 @@ body {
         content: "";
         height: 40px;
         width: 3px;
-        background: #41f6d7;
+        background: $green;
         transform: matrix(-1, 1, 0, 1, 0, 0);
         position: absolute;
         left: 0px;
@@ -492,12 +494,12 @@ body {
       margin-top: 1em;
       padding: 1em;
       display: flex;
-      background: #ffffff;
-      border: 1px solid #eaeaea;
+      background: white;
+      border: $border;
       border-radius: 8px;
     }
     & button {
-      border: 1px solid #eaeaea;
+      border: $border;
       padding: 0.5em 1em;
       background-color: #ff3e79;
       color: white;
@@ -519,7 +521,7 @@ body {
     right: 0;
     z-index: 70;
     padding: 1em;
-    background: #ffffff;
+    background: white;
     transform: translateX(320px);
     z-index: 50;
     height: 100%;
@@ -536,7 +538,7 @@ body {
         content: "";
         height: 40px;
         width: 3px;
-        background: #41f6d7;
+        background: $green;
         transform: matrix(-1, 1, 0, 1, 0, 0);
         position: absolute;
         left: 0px;
@@ -546,12 +548,12 @@ body {
       margin-top: 1em;
       padding: 1em;
       display: flex;
-      background: #ffffff;
-      border: 1px solid #eaeaea;
+      background: white;
+      border: $border;
       border-radius: 8px;
     }
     & button {
-      border: 1px solid #eaeaea;
+      border: $border;
       padding: 0.5em 1em;
       background-color: #ff3e79;
       color: white;
@@ -679,7 +681,7 @@ body {
       right: 0;
       z-index: 70;
       padding: 1em;
-      background: #ffffff;
+      background: white;
       transform: translateX(320px);
       z-index: 50;
       transition: all 0.5s;
@@ -697,12 +699,12 @@ body {
       right: 0;
       z-index: 70;
       padding: 1em;
-      background: #ffffff;
+      background: white;
       transform: translateX(320px);
       z-index: 50;
       transition: all 0.5s;
       & button {
-        border: 1px solid #eaeaea;
+        border: $border;
         padding: 0.5em 1em;
         background-color: #ff3e79;
         color: white;
@@ -784,15 +786,15 @@ body {
     }
     &__table tbody tr td {
       padding: 1em;
-      background: #ffffff;
+      background: white;
       width: 33%;
-      border-bottom: 1px solid #eaeaea;
+      border-bottom: $border;
       button svg {
         padding-left: 1em;
       }
     }
     &__table button {
-      border: 1px solid #eaeaea;
+      border: $border;
       padding: 0.5em 1.5em;
       background-color: #ff3e79;
       color: white;
@@ -853,7 +855,7 @@ body {
         content: "";
         height: 40px;
         width: 3px;
-        background: #41f6d7;
+        background: $green;
         transform: matrix(-1, 1, 0, 1, 0, 0);
         position: absolute;
         left: -28px;
