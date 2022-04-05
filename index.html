@@ -11,7 +11,9 @@
     <input type="checkbox" id="side-checkbox" hidden>
     <input type="checkbox" id="side-checkbox--feedback" hidden>
     <input type="checkbox" id="side-checkbox--call" hidden>
-    <div class="menu--overlay">
+
+
+    <div class="menu--overlay modal_window">
       <div class="menu">
         <aside class="menu__panel">
           <header class="menu__header">
@@ -126,8 +128,7 @@
           </footer>
         </aside>
       </div>
-      <div class="overlay"></div>
-    </div>
+  </div>
 
     <div class="feedback--overlay">
       <div class="feedback">
@@ -162,7 +163,6 @@
           </nav>
         </aside>
       </div>
-      <div class="overlay"></div>
     </div>
 
     <div class="call--overlay">
@@ -195,8 +195,9 @@
           </nav>
         </aside>
       </div>
-      <div class="overlay"></div>
     </div>
+
+    <div class="overlay"></div>
 
     <header class="header">
       <nav class="nav">
@@ -228,7 +229,7 @@
             </label>
           </li>
           <li>
-            <label class="feedback__button button nav__chat" for="side-checkbox--feedback">
+            <label class="feedback__button button nav__chat modal" for="side-checkbox--feedback">
               <svg width="40" height="42" viewBox="0 0 40 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="40" height="41.3491" rx="20" fill="#FF3E79"/>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M28 11.3704H12C10.9 11.3704 10.01 12.3007 10.01 13.4378L10 32.0449L14 26.8763H28C29.1 26.8763 30 25.9459 30 24.8088V13.4378C30 12.3007 29.1 11.3704 28 11.3704ZM21 22.742H15C14.45 22.742 14 22.2769 14 21.7083C14 21.1398 14.45 20.6746 15 20.6746H21C21.55 20.6746 22 21.1398 22 21.7083C22 22.2769 21.55 22.742 21 22.742ZM25 17.5734H15C14.45 17.5734 14 17.1082 14 16.5396C14 15.9711 14.45 15.5059 15 15.5059H25C25.55 15.5059 26 15.9711 26 16.5396C26 17.1082 25.55 17.5734 25 17.5734Z" fill="white"/>
@@ -342,6 +343,12 @@
                 </svg>
                 <span>Читать далее</span>
               </button>
+              <button class="button information__continue--hidden color__group">
+                <svg width="8" height="11" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M6.50008 0.500076L4.00008 3.00008L1.50008 0.500076C1.22393 0.223933 0.776218 0.223933 0.500076 0.500076C0.223933 0.776218 0.223933 1.22393 0.500075 1.50008L3.29297 4.29297C3.68349 4.68349 4.31666 4.68349 4.70718 4.29297L7.50008 1.50008C7.77622 1.22393 7.77622 0.776218 7.50008 0.500076C7.22393 0.223933 6.77622 0.223933 6.50008 0.500076ZM6.50008 6.50008L4.00008 9.00008L1.50008 6.50008C1.22393 6.22393 0.776218 6.22393 0.500076 6.50008C0.223933 6.77622 0.223933 7.22393 0.500075 7.50008L3.29297 10.293C3.68349 10.6835 4.31666 10.6835 4.70718 10.293L7.50008 7.50008C7.77622 7.22393 7.77622 6.77622 7.50008 6.50008C7.22393 6.22393 6.77622 6.22393 6.50008 6.50008Z" fill="#41F6D7"/>
+                </svg>
+                <span>Скрыть</span>
+              </button>
             </div>
             <div class="about__images">
               <img src="./img/cps.png" alt="CPS">
@@ -355,8 +362,10 @@
               Ремонт техники различных брендов
             </h3>
           </header>
+
           <div class="swiper mySwiper">
-            <ul class="brands__list swiper-wrapper reset-list">
+
+            <ul class="brands__list swiper-wrapper slider reset-list">
               
               <li class="brands__list--slider slider swiper-slide">
                 <button>
@@ -569,27 +578,32 @@
             </ul>
             <div class="swiper-pagination"></div>
           </div>
-          <button onclick="toggleModalBrand()" class="brands__list--expand expand style-button">
+          <div class="buttons_group">
+            <button class="brands__list--expand expand style-button">
             <svg width="8" height="11" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 0.5L4 3L1.5 0.5C1.22386 0.223858 0.776142 0.223858 0.5 0.5C0.223858 0.776142 0.223857 1.22386 0.5 1.5L3.29289 4.29289C3.68342 4.68342 4.31658 4.68342 4.70711 4.29289L7.5 1.5C7.77614 1.22386 7.77614 0.776142 7.5 0.5C7.22386 0.223858 6.77614 0.223858 6.5 0.5ZM6.5 6.5L4 9L1.5 6.5C1.22386 6.22386 0.776142 6.22386 0.5 6.5C0.223858 6.77614 0.223857 7.22386 0.5 7.5L3.29289 10.2929C3.68342 10.6834 4.31658 10.6834 4.70711 10.2929L7.5 7.5C7.77614 7.22386 7.77614 6.77614 7.5 6.5C7.22386 6.22386 6.77614 6.22386 6.5 6.5Z" fill="#41F6D7"/>
             </svg>
             <span>Показать все</span>
           </button>
 
-          <button onclick="toggleModalBrand()" class="brands__list--hidden hidden style-button" style="display: none">
+          <button class="brands__list--hidden hidden style-button">
             <svg width="8" height="11" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M1.49992 10.4999L3.99992 7.99992L6.49992 10.4999C6.77607 10.7761 7.22378 10.7761 7.49992 10.4999C7.77607 10.2238 7.77607 9.77607 7.49992 9.49992L4.70703 6.70703C4.31651 6.31651 3.68334 6.31651 3.29282 6.70703L0.499924 9.49993C0.223781 9.77607 0.223781 10.2238 0.499924 10.4999C0.776066 10.7761 1.22378 10.7761 1.49992 10.4999ZM1.49992 4.49992L3.99992 1.99992L6.49992 4.49992C6.77607 4.77607 7.22378 4.77607 7.49992 4.49992C7.77607 4.22378 7.77607 3.77607 7.49992 3.49992L4.70703 0.707032C4.31651 0.316508 3.68334 0.316507 3.29282 0.707031L0.499924 3.49993C0.223781 3.77607 0.223781 4.22378 0.499924 4.49993C0.776066 4.77607 1.22378 4.77607 1.49992 4.49992Z" fill="#41F6D7"/>
             </svg>
             <span>Скрыть</span>
           </button>
+          </div>
+
         </section>
 
         <section class="tech">
           <header class="tech__header section-header">
             <h3 class="tech__title title">Ремонт различных видов техники</h3>
           </header>
+
           <div class="swiper mySwiper">
-            <ul class="tech__list swiper-wrapper reset-list">
+
+            <ul class="tech__list swiper-wrapper slider reset-list">
               
               <li class="tech__list--slider slider swiper-slide">
                 <button>
@@ -703,19 +717,21 @@
             </ul>
             <div class="swiper-pagination"></div>
           </div>
-          <button onclick="toggleModalTech()" class="tech__list--expand expand style-button">
+          <div class="buttons_group">
+            <button class="tech__list--expand expand style-button">
             <svg width="8" height="11" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 0.5L4 3L1.5 0.5C1.22386 0.223858 0.776142 0.223858 0.5 0.5C0.223858 0.776142 0.223857 1.22386 0.5 1.5L3.29289 4.29289C3.68342 4.68342 4.31658 4.68342 4.70711 4.29289L7.5 1.5C7.77614 1.22386 7.77614 0.776142 7.5 0.5C7.22386 0.223858 6.77614 0.223858 6.5 0.5ZM6.5 6.5L4 9L1.5 6.5C1.22386 6.22386 0.776142 6.22386 0.5 6.5C0.223858 6.77614 0.223857 7.22386 0.5 7.5L3.29289 10.2929C3.68342 10.6834 4.31658 10.6834 4.70711 10.2929L7.5 7.5C7.77614 7.22386 7.77614 6.77614 7.5 6.5C7.22386 6.22386 6.77614 6.22386 6.5 6.5Z" fill="#41F6D7"/>
             </svg>
             <span>Показать все</span>
           </button>
-
-          <button onclick="toggleModalTech()" class="tech__list--hidden hidden style-button" style="display: none">
+          <button class="tech__list--hidden hidden style-button">
             <svg width="8" height="11" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M1.49992 10.4999L3.99992 7.99992L6.49992 10.4999C6.77607 10.7761 7.22378 10.7761 7.49992 10.4999C7.77607 10.2238 7.77607 9.77607 7.49992 9.49992L4.70703 6.70703C4.31651 6.31651 3.68334 6.31651 3.29282 6.70703L0.499924 9.49993C0.223781 9.77607 0.223781 10.2238 0.499924 10.4999C0.776066 10.7761 1.22378 10.7761 1.49992 10.4999ZM1.49992 4.49992L3.99992 1.99992L6.49992 4.49992C6.77607 4.77607 7.22378 4.77607 7.49992 4.49992C7.77607 4.22378 7.77607 3.77607 7.49992 3.49992L4.70703 0.707032C4.31651 0.316508 3.68334 0.316507 3.29282 0.707031L0.499924 3.49993C0.223781 3.77607 0.223781 4.22378 0.499924 4.49993C0.776066 4.77607 1.22378 4.77607 1.49992 4.49992Z" fill="#41F6D7"/>
             </svg>
             <span>Скрыть</span>
           </button>
+          </div>
+
         </section>
 
         <section class="prices-services">
@@ -936,6 +952,7 @@
             </ul>
             <div class="swiper-pagination"></div>
           </div>
+
           <div class="prices-services__table--block">
             <table class="prices-services__table">
               <thead>
@@ -1015,20 +1032,8 @@
             </table>
           </div>
 
-          <button onclick="toggleModalServices()" class="prices-services__list--expand expand style-button">
-            <svg width="8" height="11" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 0.5L4 3L1.5 0.5C1.22386 0.223858 0.776142 0.223858 0.5 0.5C0.223858 0.776142 0.223857 1.22386 0.5 1.5L3.29289 4.29289C3.68342 4.68342 4.31658 4.68342 4.70711 4.29289L7.5 1.5C7.77614 1.22386 7.77614 0.776142 7.5 0.5C7.22386 0.223858 6.77614 0.223858 6.5 0.5ZM6.5 6.5L4 9L1.5 6.5C1.22386 6.22386 0.776142 6.22386 0.5 6.5C0.223858 6.77614 0.223857 7.22386 0.5 7.5L3.29289 10.2929C3.68342 10.6834 4.31658 10.6834 4.70711 10.2929L7.5 7.5C7.77614 7.22386 7.77614 6.77614 7.5 6.5C7.22386 6.22386 6.77614 6.22386 6.5 6.5Z" fill="#41F6D7"/>
-            </svg>
-            <span>Показать все</span>
-          </button>
-
-          <button onclick="toggleModalServices()" class="prices-services__list--hidden hidden style-button" style="display: none">
-            <svg width="8" height="11" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M1.49992 10.4999L3.99992 7.99992L6.49992 10.4999C6.77607 10.7761 7.22378 10.7761 7.49992 10.4999C7.77607 10.2238 7.77607 9.77607 7.49992 9.49992L4.70703 6.70703C4.31651 6.31651 3.68334 6.31651 3.29282 6.70703L0.499924 9.49993C0.223781 9.77607 0.223781 10.2238 0.499924 10.4999C0.776066 10.7761 1.22378 10.7761 1.49992 10.4999ZM1.49992 4.49992L3.99992 1.99992L6.49992 4.49992C6.77607 4.77607 7.22378 4.77607 7.49992 4.49992C7.77607 4.22378 7.77607 3.77607 7.49992 3.49992L4.70703 0.707032C4.31651 0.316508 3.68334 0.316507 3.29282 0.707031L0.499924 3.49993C0.223781 3.77607 0.223781 4.22378 0.499924 4.49993C0.776066 4.77607 1.22378 4.77607 1.49992 4.49992Z" fill="#41F6D7"/>
-            </svg>
-            <span>Скрыть</span>
-          </button>
         </section>
+
         <div class="commercial-offer">
           <p>
             Все цены указаны с учетом НДС. Стоимость ремонта указана на
