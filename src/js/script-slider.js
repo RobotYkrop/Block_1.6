@@ -26,11 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   }
-
-  /* On Load
-   **************************************************************/
-  window.addEventListener("load", function () {
-    swiperMode();
-  });
+  swiperMode();
 });
 
