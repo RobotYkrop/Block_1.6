@@ -178,9 +178,6 @@ body {
     font-weight: 600;
   }
 }
-.wrapper {
-  display: none;
-}
 .information {
   &__description {
     margin-top: 1em;
@@ -388,7 +385,9 @@ body {
     color: $text-gray;
   }
 }
-
+.buttons_group {
+  display: none;
+}
 .overlay {
   height: 100vh;
   width: 100%;
@@ -734,7 +733,7 @@ body {
   display: none;
 }
 @media (min-width: 768px) {
-  .wrapper {
+  .buttons_group {
     display: block;
   }
   /* Навигационное меню */
