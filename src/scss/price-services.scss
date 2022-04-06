@@ -1,0 +1,112 @@
+.prices-services {
+  &__title {
+    margin: 0;
+  }
+  &__table {
+    display: none;
+  }
+  &__list {
+    gap: 1rem;
+    padding-left: 0;
+    padding-bottom: 1em;
+
+    &--slider {
+      background-color: white;
+      padding: 1em;
+      padding-top: 0;
+      border: $border;
+    }
+    &--slider button {
+      cursor: pointer;
+      border: $border;
+      padding: 0.5em 1em;
+      background-color: #ff3e79;
+      color: white;
+      display: inline-block;
+      border-radius: 16px;
+    }
+    &--slider dl {
+      display: inline;
+      white-space: nowrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+    }
+    &--slider dl dt {
+      color: $text-gray;
+      opacity: 0.72;
+      padding-top: 1em;
+    }
+    &--slider dl dd {
+      margin: 0;
+      color: $text;
+    }
+    &--slider button svg {
+      -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+      margin-left: auto;
+    }
+    &--expand {
+      cursor: pointer;
+    }
+    &--hidden.hidden {
+      display: none;
+      cursor: pointer;
+    }
+  }
+}
+
+.commercial-offer {
+  a {
+    text-decoration: none;
+    color: $text;
+    font-weight: 600;
+  }
+}
+@media (min-width: 768px) {
+  .prices-services__table--block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-width: 100%;
+  }
+  .prices-services {
+    &__table {
+      width: 100%;
+      margin: 1em 1em 1em 0;
+      display: block;
+      border-collapse: collapse;
+    }
+    &__table thead tr th {
+      padding: 1em;
+      text-align: start;
+    }
+    &__table tbody tr td {
+      padding: 1em;
+      background: white;
+      width: 33%;
+      border-bottom: $border;
+      button svg {
+        padding-left: 1em;
+      }
+    }
+    &__table button {
+      border: $border;
+      padding: 0.5em 1.5em;
+      background-color: #ff3e79;
+      color: white;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      border-radius: 16px;
+    }
+    .swiper {
+      display: none;
+    }
+
+  }
+}
+

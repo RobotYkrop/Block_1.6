@@ -48,6 +48,7 @@
   "engineStrict": true,
   "engines": {},
   "dependencies": {
-    "clean-webpack-plugin": "^4.0.0"
+    "clean-webpack-plugin": "^4.0.0",
+    "style-loader": "^3.3.1"
   }
 }
