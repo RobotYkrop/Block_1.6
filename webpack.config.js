@@ -15,6 +15,7 @@ module.exports = {
   // Выходной файл
   output: {
     filename: 'bundle.js',
+    assetModuleFilename: '[path][name].[ext]',
   },
 
   // Source maps для удобства отладки
@@ -50,20 +51,16 @@ module.exports = {
 
       // Подключаем шрифты из css
       {
-        test: /\.(eot|ttf|woff|woff2)$/,
-        use: [
-          {
-            loader: 'url-loader?limit=100000'
-          },
-        ]
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        type: 'asset/resource',
+        generator : {
+          filename : 'fonts/[name][ext][query]',
+        }
       },
-
       // Подключаем картинки из css
       {
         test: /\.(svg|png|jpg|jpeg|webp)$/,
-        use: [
-          'file-loader'
-        ]
+        type: 'asset/resource',
       },
     ],
   },

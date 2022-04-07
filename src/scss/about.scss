@@ -67,7 +67,6 @@
     cursor: pointer;
   }
 }
-
 .menu__services {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -77,9 +76,18 @@
   -ms-flex-align: center;
   align-items: center;
   overflow: auto;
+  ::after {
+    content: "";
+      background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      right: 0px;
+  }
   &--item {
     color: $text-gray;
     white-space: nowrap;
+    margin-bottom: 1em;
   }
   &--item .menu__button.button--active {
     background-color: white;
