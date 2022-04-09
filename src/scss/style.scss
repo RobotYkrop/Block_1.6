@@ -32,6 +32,7 @@ body {
   border: none;
   outline: none;
   background-color: white;
+  padding: 0;
 }
 .color-group {
   background: $bgColor;
@@ -67,7 +68,6 @@ body {
   background: white;
   opacity: 0.96;
   position: fixed;
-  transition: .3s all;
 }
 .style-button {
   font-family: "DemiBold", sans-serif;
@@ -126,6 +126,7 @@ svg {
     }
     &__repair svg {
       margin-left: 1.5em;
+      margin-right: .5em;
     }
   }
 }
@@ -149,16 +150,7 @@ svg {
 .buttons_group {
   display: none;
 }
-#side-checkbox:checked ~ main,
-#side-checkbox__feedback:checked ~ main,
-#side-checkbox__call:checked ~ main {
-  display: none;
-}
-#side-checkbox:checked ~ header,
-#side-checkbox__feedback:checked ~ header,
-#side-checkbox__call:checked ~ header {
-  display: none;
-}
+
 .active {
   -webkit-transform: translateX(0px);
   -ms-transform: translateX(0px);
@@ -179,6 +171,7 @@ svg {
   }
   /* Навигационное меню */
   .header {
+    display: block;
     .nav {
       padding: 1rem 1rem;
       -webkit-box-align: center;
@@ -218,16 +211,6 @@ svg {
       }
     }
   }
-  #side-checkbox:checked ~ main,
-  #side-checkbox__feedback:checked ~ main,
-  #side-checkbox__call:checked ~ main {
-    display: block;
-  }
-  #side-checkbox:checked ~ header,
-  #side-checkbox__feedback:checked ~ header,
-  #side-checkbox__call:checked ~ header {
-    display: block;
-  }
   .footer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -248,6 +231,7 @@ svg {
   }
 }
 @media (min-width: 1366px) {
+
   .content {
     margin-left: 260px;
   }

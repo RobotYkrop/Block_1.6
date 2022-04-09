@@ -124,7 +124,7 @@
 }
 @media (min-width: 1366px) {
   .about {
-    margin: 0 2em 0em 0;
+    margin: 0em 2em 0em 0em;
     &__title {
       &::before {
         content: "";
@@ -146,6 +146,7 @@
       -ms-flex-pack: justify;
       justify-content: space-between;
       position: relative;
+      margin-top: 0;
     }
     &__services {
       display: -webkit-box;
@@ -160,6 +161,7 @@
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
+        padding-left: 1em;
       }
     }
     &__services {

@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
     button_call = document.querySelectorAll(".call-button"),
     button_feedback = document.querySelectorAll(".feedback-button");
 
+  const modalClose = document.querySelectorAll(".modal-close");
   // Открытие и закрытие окон
 
   button_feedback.forEach((button_feedback) => {
@@ -41,15 +42,22 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  button_menu.addEventListener("click", (e) => {
+  button_menu.addEventListener("click", () => {
     menu.classList.add("active");
     overlay.classList.add("active");
   });
 
-  overlay.addEventListener("click", function () {
+  overlay.addEventListener("click", () => {
     document.querySelector(".active").classList.remove("active");
-    this.classList.remove("active");
+    overlay.classList.remove("active");
   });
+
+  modalClose.forEach(modalClose => {
+    modalClose.addEventListener("click", () => {
+      document.querySelector(".active").classList.remove("active");
+      overlay.classList.remove("active");
+    })
+  })
 
   // Раскрытие/скрытие списков
 
