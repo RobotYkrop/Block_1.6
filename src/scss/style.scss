@@ -67,6 +67,7 @@ body {
   background: white;
   opacity: 0.96;
   position: fixed;
+  transition: .3s all;
 }
 .style-button {
   font-family: "DemiBold", sans-serif;
@@ -80,6 +81,8 @@ body {
 svg {
   cursor: pointer;
 }
+
+
 /* Навигационное меню */
 .content {
   padding-left: 1em;
@@ -146,33 +149,6 @@ svg {
 .buttons_group {
   display: none;
 }
-#side-checkbox__feedback:checked ~ .feedback,
-#side-checkbox__call:checked ~ .call,
-#side-checkbox:checked ~ .menu {
-  -webkit-transform: translateX(0px);
-  -ms-transform: translateX(0px);
-  transform: translateX(0px);
-  z-index: 60;
-  display: block;
-  position: fixed;
-}
-#side-checkbox:checked ~ .overlay {
-  -webkit-transform: translateX(320px);
-  -ms-transform: translateX(320px);
-  transform: translateX(320px);
-  z-index: 59;
-  display: block;
-  position: fixed;
-}
-
-#side-checkbox__feedback:checked ~ .overlay,
-#side-checkbox__call:checked ~ .overlay {
-  -webkit-transform: translateX(-320px);
-  -ms-transform: translateX(-320px);
-  transform: translateX(-320px);
-  z-index: 59;
-  position: fixed;
-}
 #side-checkbox:checked ~ main,
 #side-checkbox__feedback:checked ~ main,
 #side-checkbox__call:checked ~ main {
@@ -183,6 +159,20 @@ svg {
 #side-checkbox__call:checked ~ header {
   display: none;
 }
+.active {
+  -webkit-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  transform: translateX(0px);
+  z-index: 60;
+  display: block;
+  position: fixed;
+}
+.overlay.active {
+  z-index: 59;
+  display: block;
+  position: fixed;
+}
+
 @media (min-width: 768px) {
   .buttons_group {
     display: block;
