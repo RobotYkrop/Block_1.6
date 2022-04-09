@@ -1,20 +1,23 @@
 @font-face {
-  font-family: "TT Lakes";
-  src: url(../fonts/TTLakesCondensed-Regular.woff) format('woff');
+  font-family: "Regular";
+  src: url('../assets/fonts/TTLakesCondensed-Regular.woff') format('woff'),
+  url('../assets/fonts/TTLakesCondensed-Regular.ttf') format('ttf');
   font-weight: 400;
   font-style: normal;
   font-display: swap
 }
 @font-face {
-  font-family: "TT Lakes";
-  src: url(../fonts/TTLakesCondensed-DemiBold.woff) format('woff');
+  font-family: "DemiBold";
+  src: url('../assets/fonts/TTLakesCondensed-DemiBold.woff') format('woff'),
+  url('../assets/fonts/TTLakesCondensed-DemiBold.ttf') format('ttf');
   font-weight: 600;
   font-style: normal;
   font-display: swap
 }
 @font-face {
-  font-family: "TT Lakes";
-  src: url(../fonts/TTLakesCondensed-Bold.woff) format('woff');
+  font-family: "Bold";
+  src: url('../assets/fonts/TTLakesCondensed-Bold.woff') format('woff'),
+      url('../assets/fonts/TTLakesCondensed-Bold.ttf') format('ttf');
   font-weight: 700;
   font-style: normal;
   font-display: swap

@@ -3,6 +3,7 @@
     margin-top: 1.5em;
   }
   &__title {
+    font-family: "DemiBold", sans-serif;
     font-weight: 600;
     font-size: 28px;
     line-height: 36px;
@@ -22,13 +23,30 @@
       left: 0px;
     }
   }
-  &__group--services {
+  &__services {
     display: none;
   }
   &__images img {
     margin-top: 1em;
     width: 320px;
     border-radius: 6px;
+  }
+  &__item {
+    color: $text-gray;
+    white-space: nowrap;
+    margin-bottom: 1em;
+  }
+  &__item .about-button.button--active {
+    background-color: white;
+    border: 2px solid #b8ffec;
+    border-radius: 6px;
+  }
+  &__item .about-button {
+    padding: 0.5em 1em 0.5em 1em;
+    color: $text-gray;
+    background: $bgColor;
+    font-family: "DemiBold", sans-serif;
+    font-weight: 600;
   }
 }
 
@@ -37,37 +55,38 @@
     margin-top: 1em;
     overflow: auto;
   }
-  &__description--text {
+  &__text {
     margin-top: 0;
     font-size: 18px;
     line-height: 20px;
     letter-spacing: 0.2px;
     color: $text;
   }
-  &__description--text:nth-child(2) {
+  &__text:nth-child(2) {
     display: none;
   }
-  &__continue, &__continue--hidden {
+  &__continue, &__hidden {
     margin-top: 0.5em;
     cursor: pointer;
   }
   &__continue, svg {
     margin-left: 0.5em;
   }
-  &__continue, &__continue--hidden, span {
+  &__continue, &__hidden, span {
     font-size: 18px;
     line-height: 24px;
     letter-spacing: -0.2px;
     color: $text;
     margin-left: 1em;
-    font-weight: 600;
+    font-family: "Bold", sans-serif;
+    font-weight: 700;
   }
-  &__continue--hidden {
+  &__hidden {
     display: none;
     cursor: pointer;
   }
 }
-.menu__services {
+.about__menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -83,22 +102,6 @@
       height: 40px;
       position: absolute;
       right: 0px;
-  }
-  &--item {
-    color: $text-gray;
-    white-space: nowrap;
-    margin-bottom: 1em;
-  }
-  &--item .menu__button.button--active {
-    background-color: white;
-    border: 2px solid #b8ffec;
-    border-radius: 6px;
-  }
-  &--item .menu__button {
-    padding: 0.5em 1em 0.5em 1em;
-    color: $text-gray;
-    background: $bgColor;
-    font-weight: 600;
   }
 }
 @media (min-width: 768px) {
@@ -144,13 +147,13 @@
       justify-content: space-between;
       position: relative;
     }
-    &__group--services {
+    &__services {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
     }
-    &__group--services {
-      .button__service {
+    &__services {
+      .button-service {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -159,8 +162,9 @@
         align-items: center;
       }
     }
-    &__group--services {
-      .button__service span {
+    &__services {
+      .button-service span {
+        font-family: "DemiBold", sans-serif;
         font-weight: 600;
         padding-right: 0.5em;
         color: $text;

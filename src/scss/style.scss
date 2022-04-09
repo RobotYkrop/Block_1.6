@@ -4,21 +4,21 @@ $text-gray: #7e7e82;
 $border: 1px solid #eaeaea;
 $green: #41f6d7;
 
-@import './brands.scss';
-@import './about.scss';
-@import './call.scss';
-@import './feedback.scss';
-@import './menu.scss';
-@import './tech.scss';
-@import './price-services.scss';
-@import './fonts.scss';
+@import 'brands.scss';
+@import 'about.scss';
+@import 'call.scss';
+@import 'feedback.scss';
+@import 'menu.scss';
+@import 'tech.scss';
+@import 'price-services.scss';
+@import 'fonts.scss';
 
 html,
 body {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
-  font-family: "TT Lakes Regular";
+  font-family: "Regular", sans-serif;
   margin: 0;
   padding: 0;
   background: $bgColor;
@@ -33,7 +33,7 @@ body {
   outline: none;
   background-color: white;
 }
-.color__group {
+.color-group {
   background: $bgColor;
 }
 .section-header {
@@ -69,7 +69,8 @@ body {
   position: fixed;
 }
 .style-button {
-  font-family: "TT Lakes Demibold", sans-serif;
+  font-family: "DemiBold", sans-serif;
+  font-weight: 600;
   display: inline;
   margin-left: 1.5em;
   border: none;
@@ -113,7 +114,7 @@ svg {
       border-right: 2px #eaeaea solid;
       border-radius: 1px;
     }
-    &__support--group {
+    &__support {
       display: none;
     }
     &__logo {
@@ -145,16 +146,9 @@ svg {
 .buttons_group {
   display: none;
 }
-#side-checkbox--feedback:checked ~ .feedback,
-#side-checkbox--call:checked ~ .call {
-  -webkit-transform: translateX(0px);
-  -ms-transform: translateX(0px);
-  transform: translateX(0px);
-  z-index: 60;
-  display: block;
-  position: fixed;
-}
-#side-checkbox:checked ~ .menu{
+#side-checkbox__feedback:checked ~ .feedback,
+#side-checkbox__call:checked ~ .call,
+#side-checkbox:checked ~ .menu {
   -webkit-transform: translateX(0px);
   -ms-transform: translateX(0px);
   transform: translateX(0px);
@@ -171,8 +165,8 @@ svg {
   position: fixed;
 }
 
-#side-checkbox--feedback:checked ~ .overlay,
-#side-checkbox--call:checked ~ .overlay {
+#side-checkbox__feedback:checked ~ .overlay,
+#side-checkbox__call:checked ~ .overlay {
   -webkit-transform: translateX(-320px);
   -ms-transform: translateX(-320px);
   transform: translateX(-320px);
@@ -180,20 +174,15 @@ svg {
   position: fixed;
 }
 #side-checkbox:checked ~ main,
-#side-checkbox--feedback:checked ~ main,
-#side-checkbox--call:checked ~ main {
+#side-checkbox__feedback:checked ~ main,
+#side-checkbox__call:checked ~ main {
   display: none;
 }
 #side-checkbox:checked ~ header,
-#side-checkbox--feedback:checked ~ header,
-#side-checkbox--call:checked ~ header {
+#side-checkbox__feedback:checked ~ header,
+#side-checkbox__call:checked ~ header {
   display: none;
 }
-#side-checkbox--feedback ~ .feedback,
-#side-checkbox--call ~ .call {
-  display: none;
-}
-
 @media (min-width: 768px) {
   .buttons_group {
     display: block;
@@ -217,7 +206,7 @@ svg {
         border-left: 2px #eaeaea solid;
         border-radius: 1px;
       }
-      &__support--group {
+      &__support {
         margin-left: auto;
         position: relative;
         display: -webkit-box;
@@ -240,13 +229,13 @@ svg {
     }
   }
   #side-checkbox:checked ~ main,
-  #side-checkbox--feedback:checked ~ main,
-  #side-checkbox--call:checked ~ main {
+  #side-checkbox__feedback:checked ~ main,
+  #side-checkbox__call:checked ~ main {
     display: block;
   }
   #side-checkbox:checked ~ header,
-  #side-checkbox--feedback:checked ~ header,
-  #side-checkbox--call:checked ~ header {
+  #side-checkbox__feedback:checked ~ header,
+  #side-checkbox__call:checked ~ header {
     display: block;
   }
   .footer {

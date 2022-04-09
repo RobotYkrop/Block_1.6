@@ -75,7 +75,9 @@
       border: none;
       padding: 0;
       text-align: start;
-      font-family: "TT Lakes Demibold";
+      font-family: "TT Lakes";
+      font-weight: 600;
+      cursor: pointer;
       &:hover {
         opacity: 0.7;
       }
@@ -83,7 +85,7 @@
         opacity: 0.3;
       }
     }
-    .button__active {
+    .button--active {
       color: $text-gray;
       opacity: 1;
       &::before {
@@ -94,13 +96,12 @@
         -webkit-transform: matrix(-1, 1, 0, 1, 0, 0);
         -ms-transform: matrix(-1, 1, 0, 1, 0, 0);
         transform: matrix(-1, 1, 0, 1, 0, 0);
-        cursor: pointer;
         position: absolute;
         left: 0;
       }
     }
     &__footer {
-      .support__group {
+      .support-group {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -114,9 +115,11 @@
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
+        font-family: "DemiBold", sans-serif;
         font-weight: 600;
       }
-      .tel-text {
+      .contact__tel {
+        font-family: "DemiBold", sans-serif;
         font-weight: 600;
         font-size: 24px;
         line-height: 32px;
@@ -133,11 +136,14 @@
           color: $text;
           margin-right: 0.5em;
           text-align: start;
+          font-family: "DemiBold", sans-serif;
           font-weight: 600;
           cursor: pointer;
           padding: 0;
-          &__active {
+          &--active {
             color: $text-gray;
+            font-family: "DemiBold", sans-serif;
+            font-weight: 600;
           }
         }
       }
