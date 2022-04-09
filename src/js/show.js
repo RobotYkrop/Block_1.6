@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     feedback = document.querySelector(".feedback");
 
   const button_menu = document.querySelector(".nav__menu"),
-    button_call = document.querySelectorAll(".nav__tel"),
+    button_call = document.querySelectorAll(".call-button"),
     button_feedback = document.querySelectorAll(".feedback-button");
 
   // Открытие и закрытие окон
