@@ -10,7 +10,8 @@
     "watch": "webpack --mode development --watch",
     "start": "webpack-dev-server --mode development --open",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "prettier": "prettier  — write src/**/*.js"
   },
   "author": "",
   "license": "ISC",
@@ -49,6 +50,13 @@
   "engines": {},
   "dependencies": {
     "clean-webpack-plugin": "^4.0.0",
+    "eslint": "^8.13.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-babel": "^5.3.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.6.2",
     "style-loader": "^3.3.1"
   }
 }
