@@ -3,16 +3,15 @@
     margin-top: 1.5em;
   }
   &__title {
-    font-family: "DemiBold", sans-serif;
-    font-weight: 600;
+    font-family: 'Bold', sans-serif;
     font-size: 28px;
-    line-height: 36px;
+    line-height: 40px;
     letter-spacing: -0.6px;
     color: $text;
     background: $bgColor;
 
     &::before {
-      content: "";
+      content: '';
       height: 40px;
       width: 3px;
       background: $green;
@@ -25,11 +24,6 @@
   }
   &__services {
     display: none;
-  }
-  &__images img {
-    margin-top: 1em;
-    width: 320px;
-    border-radius: 6px;
   }
   &__item {
     color: $text-gray;
@@ -45,12 +39,15 @@
     padding: 0.5em 1em 0.5em 1em;
     color: $text-gray;
     background: $bgColor;
-    font-family: "DemiBold", sans-serif;
-    font-weight: 600;
+    font-family: 'DemiBold', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 
 .information {
+  display: flex;
+  flex-wrap: wrap;
   &__description {
     margin-top: 1em;
     overflow: auto;
@@ -65,25 +62,33 @@
   &__text:nth-child(2) {
     display: none;
   }
-  &__continue, &__hidden {
+  &__continue,
+  &__hidden {
     margin-top: 0.5em;
     cursor: pointer;
   }
-  &__continue, svg {
+  &__continue,
+  svg {
     margin-left: 0.5em;
   }
-  &__continue, &__hidden, span {
+  &__continue,
+  &__hidden,
+  span {
     font-size: 18px;
     line-height: 24px;
     letter-spacing: -0.2px;
     color: $text;
     margin-left: 1em;
-    font-family: "Bold", sans-serif;
-    font-weight: 700;
+    font-family: 'DemiBold', sans-serif;
   }
   &__hidden {
     display: none;
     cursor: pointer;
+  }
+  .about__images img {
+    margin-top: 1em;
+    max-width: 300px;
+    border-radius: 6px;
   }
 }
 .about__menu {
@@ -96,30 +101,34 @@
   align-items: center;
   overflow: auto;
   ::after {
-    content: "";
-      background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
-      width: 40px;
-      height: 40px;
-      position: absolute;
-      right: 0px;
+    content: '';
+    background: linear-gradient(270deg, #f8f8f8 16.84%, rgba(248, 248, 248, 0.014) 100%);
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 0px;
+  }
+  ::before {
+    content: '';
+    background: linear-gradient(90deg, #f8f8f8 16.84%, rgba(248, 248, 248, 0.014) 100%);
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: -10px;
   }
 }
 @media (min-width: 768px) {
-  .about {
-    &__images img {
+  .information {
+    flex-wrap: nowrap;
+    margin-top: 1em;
+    min-height: 5em;
+    &__description {
+      margin-top: 0;
+    }
+    .about__images img {
       max-width: 400px;
       margin: 0 0 0 2em;
     }
-  }
-}
-.information {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 1em;
-  min-height: 5em;
-  &__description {
-    margin-top: 0;
   }
 }
 @media (min-width: 1366px) {
@@ -127,7 +136,7 @@
     margin: 0em 2em 0em 0em;
     &__title {
       &::before {
-        content: "";
+        content: '';
         height: 40px;
         width: 3px;
         background: $green;
@@ -166,7 +175,7 @@
     }
     &__services {
       .button-service span {
-        font-family: "DemiBold", sans-serif;
+        font-family: 'DemiBold', sans-serif;
         font-weight: 600;
         padding-right: 0.5em;
         color: $text;

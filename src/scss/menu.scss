@@ -75,8 +75,10 @@
       border: none;
       padding: 0;
       text-align: start;
-      font-family: "TT Lakes";
-      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.2px;
+      font-family: "DemiBold";
       cursor: pointer;
       &:hover {
         opacity: 0.7;
@@ -118,9 +120,8 @@
         font-family: "DemiBold", sans-serif;
         font-weight: 600;
       }
-      .contact__tel {
+      .menu__tel {
         font-family: "DemiBold", sans-serif;
-        font-weight: 600;
         font-size: 24px;
         line-height: 32px;
         letter-spacing: -0.6px;

@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function (e) {
   const open__brand = document.querySelector(".brands__expand"),
     close__brand = document.querySelector(".brands__hidden"),
     open__tech = document.querySelector(".tech__expand"),
@@ -10,9 +10,11 @@ document.addEventListener("DOMContentLoaded", function () {
     slider__tech = [
       ...document.querySelectorAll(".tech__slider:nth-child(n+7)"),
     ],
+    slider = [...document.querySelectorAll(".slider")],
+
     buttons_group = [...document.querySelectorAll(".buttons-group")];
 
-  const information = document.querySelector(".information__continue"),
+  const information__continue = document.querySelector(".information__continue"),
     text = document.querySelector(".information__text:nth-child(2)"),
     information__hidden = document.querySelector(".information__hidden");
 
@@ -42,18 +44,18 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  button_menu.addEventListener("click", () => {
+  button_menu.addEventListener("click", (e) => {
     menu.classList.add("active");
     overlay.classList.add("active");
   });
 
-  overlay.addEventListener("click", () => {
+  overlay.addEventListener("click", (e) => {
     document.querySelector(".active").classList.remove("active");
     overlay.classList.remove("active");
   });
 
   modalClose.forEach(modalClose => {
-    modalClose.addEventListener("click", () => {
+    modalClose.addEventListener("click", (e) => {
       document.querySelector(".active").classList.remove("active");
       overlay.classList.remove("active");
     })
@@ -61,15 +63,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Раскрытие/скрытие списков
 
-  information.addEventListener("click", () => {
-    text.style.display = "block";
-    information.style.display = "none";
+  const fadeIn = (slider, timeout, display) => {
+    slider.style.opacity = '0';
+    slider.style.display = display || 'flex';
+    slider.style.transition = `opacity ${timeout}ms`;
+    setTimeout(() => {
+      slider.style.opacity = 1;
+    }, 10);
+  };
+
+  const fadeOut = (slider__brand, timeout) => {
+    slider__brand.style.opacity = 1;
+    slider__brand.style.transition = `opacity ${timeout}ms`;
+    slider__brand.style.opacity = 0;
+    setTimeout(() => {
+      slider__brand.style.display = 'none';
+    }, timeout);
+  };
+
+  information__continue.addEventListener("click", (e) => {
+    fadeIn(text, 1000, 'block');
+    information__continue.style.display = "none";
     information__hidden.style.display = "block";
   });
 
-  information__hidden.addEventListener("click", () => {
-    text.style.display = "none";
-    information.style.display = "block";
+  information__hidden.addEventListener("click", (e) => {
+    fadeOut(text, 1000, 'none');
+    information__continue.style.display = "block";
     information__hidden.style.display = "none";
   });
 
@@ -80,14 +100,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (event.target && this.contains(button_expand)) {
         slider__brand.forEach((slider__brand) => {
-          slider__brand.style.display = "flex";
+          fadeIn(slider__brand, 1000, 'flex');
           open__brand.style.display = "none";
           close__brand.style.display = "block";
         });
       }
       if (event.target && this.contains(button_hidden)) {
         slider__brand.forEach((slider__brand) => {
-          slider__brand.style.display = "none";
+          fadeOut(slider__brand, 1000, 'flex');
           open__brand.style.display = "block";
           close__brand.style.display = "none";
         });
@@ -102,14 +122,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (event.target && this.contains(button_expand)) {
         slider__tech.forEach((slider__tech) => {
-          slider__tech.style.display = "flex";
+          fadeIn(slider__tech, 1000, 'flex');
           open__tech.style.display = "none";
           close__tech.style.display = "block";
         });
       }
       if (event.target && this.contains(button_hidden)) {
         slider__tech.forEach((slider__tech) => {
-          slider__tech.style.display = "none";
+          fadeOut(slider__tech, 1000, 'flex');
           open__tech.style.display = "block";
           close__tech.style.display = "none";
         });
