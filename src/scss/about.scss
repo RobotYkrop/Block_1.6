@@ -3,7 +3,8 @@
     margin-top: 1.5em;
   }
   &__title {
-    font-family: 'Bold', sans-serif;
+    font-family: 'TT Lakes', sans-serif;
+    font-weight: 700;
     font-size: 28px;
     line-height: 40px;
     letter-spacing: -0.6px;
@@ -39,9 +40,10 @@
     padding: 0.5em 1em 0.5em 1em;
     color: $text-gray;
     background: $bgColor;
-    font-family: 'DemiBold', sans-serif;
+    font-family: 'TT Lakes', sans-serif;
     font-size: 16px;
     line-height: 24px;
+    font-weight: 600;
   }
 }
 
@@ -79,7 +81,8 @@
     letter-spacing: -0.2px;
     color: $text;
     margin-left: 1em;
-    font-family: 'DemiBold', sans-serif;
+    font-family: 'TT Lakes', sans-serif;
+    font-weight: 600;
   }
   &__hidden {
     display: none;
@@ -175,7 +178,8 @@
     }
     &__services {
       .button-service span {
-        font-family: 'DemiBold', sans-serif;
+        font-family: 'TT Lakes', sans-serif;
+        font-weight: 600;
         font-size: 16px;
         line-height: 24px;
         padding-right: 0.5em;

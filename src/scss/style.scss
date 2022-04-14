@@ -18,7 +18,8 @@ body {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
-  font-family: "Regular", sans-serif;
+  font-family: "TT Lakes", sans-serif;
+  font-weight: 400;
   margin: 0;
   padding: 0;
   background: $bgColor;
@@ -70,7 +71,7 @@ body {
   position: fixed;
 }
 .style-button {
-  font-family: "DemiBold", sans-serif;
+  font-family: "TT Lakes", sans-serif;
   font-weight: 600;
   display: inline;
   margin-left: 1.5em;

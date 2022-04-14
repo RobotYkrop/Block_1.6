@@ -1,6 +1,11 @@
 .prices-services {
   &__title {
     margin: 0;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    font-family: 'TT Lakes', sans-serif;
+    font-weight: 400;
   }
   &__table {
     display: none;
@@ -59,7 +64,7 @@
   a {
     text-decoration: none;
     color: $text;
-    font-family: "DemiBold", sans-serif;
+    font-family: 'DemiBold', sans-serif;
     font-weight: 600;
   }
 }
@@ -75,10 +80,10 @@
     margin-right: 1em;
   }
   .prices-services__table {
-      width: 100%;
-      margin: 1em 1em 1em 0;
-      display: block;
-      border-collapse: collapse;
+    width: 100%;
+    margin: 1em 1em 1em 0;
+    display: block;
+    border-collapse: collapse;
     & thead tr th {
       padding: 1em;
       text-align: start;
@@ -110,4 +115,3 @@
     }
   }
 }
-
