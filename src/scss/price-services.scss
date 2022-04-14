@@ -64,8 +64,11 @@
   a {
     text-decoration: none;
     color: $text;
-    font-family: 'DemiBold', sans-serif;
+    font-family: 'TT Lakes', sans-serif;
     font-weight: 600;
+  }
+  p {
+    max-width: 420px;
   }
 }
 @media (min-width: 768px) {

@@ -120,11 +120,12 @@
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        font-family: "DemiBold", sans-serif;
+        font-family: "TT Lakes", sans-serif;
         font-weight: 600;
       }
       .menu__tel {
-        font-family: "DemiBold", sans-serif;
+        font-family: "TT Lakes", sans-serif;
+        font-weight: 600;
         font-size: 24px;
         line-height: 32px;
         letter-spacing: -0.6px;
@@ -140,13 +141,13 @@
           color: $text;
           margin-right: 0.5em;
           text-align: start;
-          font-family: "DemiBold", sans-serif;
+          font-family: "TT Lakes", sans-serif;
           font-weight: 600;
           cursor: pointer;
           padding: 0;
           &--active {
             color: $text-gray;
-            font-family: "DemiBold", sans-serif;
+            font-family: "TT Lakes", sans-serif;
             font-weight: 600;
           }
         }
