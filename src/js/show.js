@@ -50,7 +50,10 @@ document.addEventListener("DOMContentLoaded", function (e) {
   });
 
   overlay.addEventListener("click", (e) => {
-    document.querySelector(".active").classList.remove("active");
+    let notActive = document.querySelectorAll(".active");
+    notActive.forEach(notActive => {
+      notActive.classList.remove("active");
+    })
     overlay.classList.remove("active");
   });
 
