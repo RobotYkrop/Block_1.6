@@ -34,9 +34,13 @@
   }
   &__expand {
     cursor: pointer;
+    font-size: 16px;
+line-height: 24px;
   }
   &__hidden.hidden {
     display: none;
+    font-size: 16px;
+    line-height: 24px;
     cursor: pointer;
   }
 }

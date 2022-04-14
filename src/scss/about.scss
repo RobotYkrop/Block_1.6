@@ -176,7 +176,8 @@
     &__services {
       .button-service span {
         font-family: 'DemiBold', sans-serif;
-        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
         padding-right: 0.5em;
         color: $text;
       }
