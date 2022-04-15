@@ -47,18 +47,24 @@
       border-radius: 8px;
     }
     & button {
+      cursor: pointer;
       border: $border;
       padding: 0.5em 1em;
-      background-color: #ff3e79;
-      color: white;
       border-radius: 16px;
+      color: white;
       margin-left: auto;
+      background-color: #ff3e79;
+      transition: background-color 0.5s ease;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
+    }
+
+    button:hover {
+      background-color: #fd18b1;
     }
     & p a {
       text-decoration: none;
@@ -72,7 +78,6 @@
       max-width: 320px;
       position: fixed;
       right: 0;
-
       background: white;
       -webkit-transform: translateX(500px);
       -ms-transform: translateX(500px);
@@ -83,14 +88,6 @@
       &__close {
         position: absolute;
         left: -65px;
-      }
-      & button {
-        border: $border;
-        padding: 0.5em 1em;
-        background-color: #ff3e79;
-        color: white;
-        border-radius: 16px;
-        margin-left: auto;
       }
     }
   }

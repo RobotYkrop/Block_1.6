@@ -30,11 +30,21 @@
     color: $text-gray;
     white-space: nowrap;
     margin-bottom: 1em;
+    cursor: pointer;
+    :hover {
+      opacity: .6;
+      transition: opacity 1s ease;
+      cursor: pointer;
+    }
+    :focus {
+      opacity: 0.3;
+    }
   }
   &__item .about-button.button--active {
     background-color: white;
     border: 2px solid #b8ffec;
     border-radius: 6px;
+    opacity: 1;
   }
   &__item .about-button {
     padding: 0.5em 1em 0.5em 1em;
@@ -69,6 +79,7 @@
     margin-top: 0.5em;
     cursor: pointer;
   }
+
   &__continue,
   svg {
     margin-left: 0.5em;
@@ -92,6 +103,26 @@
     margin-top: 1em;
     max-width: 300px;
     border-radius: 6px;
+  }
+}
+.information__continue{
+  :hover {
+    opacity: .6;
+    transition: opacity 1s ease;
+    cursor: pointer;
+  }
+  :focus {
+    opacity: 0.3;
+  }
+}
+.information__hidden {
+  :hover {
+    opacity: .6;
+    transition: opacity 1s ease;
+    cursor: pointer;
+  }
+  :focus {
+    opacity: 0.3;
   }
 }
 .about__menu {

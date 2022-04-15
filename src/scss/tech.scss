@@ -32,6 +32,19 @@
     -ms-flex: auto;
     flex: auto;
   }
+  &__slider button:hover {
+    & svg:nth-child(2) {
+      -webkit-animation: swing 0.6s ease;
+      animation: swing 0.6s ease;
+      -webkit-animation-iteration-count: 1;
+      animation-iteration-count: 1;
+    }
+  }
+  &__slider button:focus {
+    & svg:nth-child(2) {
+      opacity: 0.3;
+    }
+  }
   &__slider button span {
     -ms-flex-item-align: start;
     -ms-grid-row-align: start;
@@ -45,10 +58,26 @@
   }
   &__expand {
     cursor: pointer;
+    :hover {
+      opacity: .6;
+      transition: opacity 1s ease;
+      cursor: pointer;
+  }
+  :focus {
+    opacity: 0.3;
+  }
   }
   &__hidden.hidden {
     display: none;
     cursor: pointer;
+    :hover {
+      opacity: .6;
+      transition: opacity 1s ease;
+      cursor: pointer;
+  }
+  :focus {
+    opacity: 0.3;
+  }
   }
 }
 @media (min-width: 768px) {
