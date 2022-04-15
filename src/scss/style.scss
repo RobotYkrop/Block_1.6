@@ -200,6 +200,10 @@ svg {
   a {
     text-decoration: none;
     color: $text-gray;
+    transition: color 1s ease;
+  }
+  a:hover {
+    color: black
   }
 }
 .buttons_group {
